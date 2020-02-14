@@ -20,7 +20,12 @@ end
 # { directorOne => allTheMoneyTheyMade, ... }
 def directors_totals(nds)
   result = {}
-  
-  
-  nil
+   result = {}
+  row = 0
+  while row < source.size do
+    name = source[row]
+    result[name[:name]] = gross_for_director(name)
+    row += 1
+  end
+  result
 end
